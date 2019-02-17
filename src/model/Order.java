@@ -17,4 +17,19 @@ public class Order {
     return order;
   }
 
+  public double getTotal() {
+    double total = 0;
+    for (Dish dish : this.order) {
+      total += dish.gerTotalOfEach();
+    }
+    return total;
+  }
+
+  public StringBuffer printDetail() {
+    StringBuffer detail = new StringBuffer();
+    for (Dish dish : this.order) {
+      detail.append(dish.printDetail() + "\n");
+    }
+    return detail;
+  }
 }
