@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class Menu {
   private String id;
   private String name;
-  private float price;
+  private double price;
 
-  public Menu(String id, String name, float price) {
+  public Menu(String id, String name, double price) {
     this.id = id;
     this.name = name;
     this.price = price;
@@ -21,14 +21,14 @@ public class Menu {
     return this.name;
   }
 
-  public float getPrice() {
+  public double getPrice() {
     return this.price;
   }
 
   public static ArrayList<Menu> allMenus = new ArrayList<Menu>();
 
   public static Menu getItem(String id) {
-    Menu found = new Menu("ITEM0000", "NOT FOUND", 0.0f);
+    Menu found = new Menu("ITEM0000", "NOT FOUND", 0);
     for (Menu menu : allMenus) {
       if (menu.getId().equals(id)) {
         found = menu;
