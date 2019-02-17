@@ -31,7 +31,7 @@ public class PrintOrder {
                         "-----------------------------------\n");
             }
         }
-        double finalPay = order.getTotal() - discount;
+        double finalPay = order.originalPrice() - discount;
         dishList.append("总计：" + finalPay + "元\n" +
                 "===================================");
         return dishList.toString();

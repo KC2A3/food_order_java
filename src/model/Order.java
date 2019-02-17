@@ -17,12 +17,12 @@ public class Order {
     return order;
   }
 
-  public double getTotal() {
-    double total = 0;
+  public double originalPrice() {
+    double originalPrice = 0;
     for (Dish dish : this.order) {
-      total += dish.gerTotalOfEach();
+      originalPrice += dish.gerTotalOfEach();
     }
-    return total;
+    return originalPrice;
   }
 
   public StringBuffer printDetail() {

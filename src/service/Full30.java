@@ -9,6 +9,6 @@ public class Full30 extends PromotionType {
   }
 
   public double HalfPrice(Order order) {
-    return order.getTotal() >= 30 ? 6 : 0;
+    return order.originalPrice() >= 30 ? 6 : 0;
   }
 }
