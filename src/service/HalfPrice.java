@@ -18,7 +18,7 @@ public class HalfPrice extends PromotionType {
     ArrayList<String> specialItemNames = new ArrayList<String>();
     for (Dish dish : order.getOrder()) {
       for (Menu specialMenu : specialList) {
-        if (dish.getMenu().getId().equals(specialMenu.getId())) {
+        if (dish.getMenu().equals(specialMenu.getId())) {
           specialItemNames.add(specialMenu.getName());
         }
       }
@@ -31,7 +31,7 @@ public class HalfPrice extends PromotionType {
     double discountPrice = 0;
     for (Dish dish : order.getOrder()) {
       for (Menu specialMenu : specialList) {
-        if (dish.getMenu().getId().equals(specialMenu.getId())) {
+        if (dish.getMenu().equals(specialMenu.getId())) {
           discountPrice += dish.gerTotalOfEach() * 0.5;
         }
       }
