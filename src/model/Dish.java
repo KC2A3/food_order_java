@@ -19,15 +19,4 @@ public class Dish {
   public int getCount() {
     return count;
   }
-
-  public double gerTotalOfEach() {
-    return  this.getCount();
-  }
-
-  public StringBuffer printDetail() {
-    StringBuffer detail = new StringBuffer();
-    detail.append(
-        this.getMenu()+ "x" + this.getCount() + "=" + this.gerTotalOfEach() + "元");
-    return detail;
-  }
 }
