@@ -22,7 +22,7 @@ public class Order {
     for (Dish dish : this.order) {
       originalPrice += dish.gerTotalOfEach();
     }
-    return originalPrice;
+    return this.originalPrice;
   }
 
   public StringBuffer printDetail() {
@@ -30,6 +30,6 @@ public class Order {
     for (Dish dish : this.order) {
       detail.append(dish.printDetail() + "\n");
     }
-    return detail;
+    return this.detail;
   }
 }

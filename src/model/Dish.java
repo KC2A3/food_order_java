@@ -13,10 +13,10 @@ public class Dish {
   }
 
   public String getMenu() {
-    return menu;
+    return this.menu;
   }
 
   public int getCount() {
-    return count;
+    return this.count;
   }
 }
